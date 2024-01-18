@@ -257,6 +257,7 @@ public class Invoice extends javax.swing.JInternalFrame {
         btnPrint2 = new javax.swing.JButton();
         btnPrint3 = new javax.swing.JButton();
         btnPrint4 = new javax.swing.JButton();
+        jLabel37 = new javax.swing.JLabel();
 
         scOption1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         scOption1.setToolTipText("");
@@ -287,9 +288,11 @@ public class Invoice extends javax.swing.JInternalFrame {
         tblOption1.getTableHeader().setResizingAllowed(false);
         tblOption1.getTableHeader().setReorderingAllowed(false);
         scOption1.setViewportView(tblOption1);
-        tblOption1.getColumnModel().getColumn(0).setPreferredWidth(100);
-        tblOption1.getColumnModel().getColumn(1).setPreferredWidth(150);
-        tblOption1.getColumnModel().getColumn(2).setPreferredWidth(100);
+        if (tblOption1.getColumnModel().getColumnCount() > 0) {
+            tblOption1.getColumnModel().getColumn(0).setPreferredWidth(100);
+            tblOption1.getColumnModel().getColumn(1).setPreferredWidth(150);
+            tblOption1.getColumnModel().getColumn(2).setPreferredWidth(100);
+        }
 
         jtpMain.setNextFocusableComponent(txtClientName);
 
@@ -324,11 +327,13 @@ public class Invoice extends javax.swing.JInternalFrame {
         tblOption.getTableHeader().setResizingAllowed(false);
         tblOption.getTableHeader().setReorderingAllowed(false);
         scOption.setViewportView(tblOption);
-        tblOption.getColumnModel().getColumn(0).setPreferredWidth(1);
-        tblOption.getColumnModel().getColumn(1).setPreferredWidth(100);
-        tblOption.getColumnModel().getColumn(2).setPreferredWidth(200);
-        tblOption.getColumnModel().getColumn(3).setPreferredWidth(50);
-        tblOption.getColumnModel().getColumn(4).setPreferredWidth(80);
+        if (tblOption.getColumnModel().getColumnCount() > 0) {
+            tblOption.getColumnModel().getColumn(0).setPreferredWidth(1);
+            tblOption.getColumnModel().getColumn(1).setPreferredWidth(100);
+            tblOption.getColumnModel().getColumn(2).setPreferredWidth(200);
+            tblOption.getColumnModel().getColumn(3).setPreferredWidth(50);
+            tblOption.getColumnModel().getColumn(4).setPreferredWidth(80);
+        }
 
         txtSAPCode.setNextFocusableComponent(txtItemName);
         txtSAPCode.addActionListener(new java.awt.event.ActionListener() {
@@ -384,15 +389,17 @@ public class Invoice extends javax.swing.JInternalFrame {
             }
         });
         scMain.setViewportView(tblMain);
-        tblMain.getColumnModel().getColumn(0).setPreferredWidth(40);
-        tblMain.getColumnModel().getColumn(1).setPreferredWidth(90);
-        tblMain.getColumnModel().getColumn(2).setPreferredWidth(200);
-        tblMain.getColumnModel().getColumn(3).setPreferredWidth(80);
-        tblMain.getColumnModel().getColumn(4).setPreferredWidth(60);
-        tblMain.getColumnModel().getColumn(5).setPreferredWidth(80);
-        tblMain.getColumnModel().getColumn(6).setMinWidth(0);
-        tblMain.getColumnModel().getColumn(6).setPreferredWidth(0);
-        tblMain.getColumnModel().getColumn(6).setMaxWidth(0);
+        if (tblMain.getColumnModel().getColumnCount() > 0) {
+            tblMain.getColumnModel().getColumn(0).setPreferredWidth(40);
+            tblMain.getColumnModel().getColumn(1).setPreferredWidth(90);
+            tblMain.getColumnModel().getColumn(2).setPreferredWidth(200);
+            tblMain.getColumnModel().getColumn(3).setPreferredWidth(80);
+            tblMain.getColumnModel().getColumn(4).setPreferredWidth(60);
+            tblMain.getColumnModel().getColumn(5).setPreferredWidth(80);
+            tblMain.getColumnModel().getColumn(6).setMinWidth(0);
+            tblMain.getColumnModel().getColumn(6).setPreferredWidth(0);
+            tblMain.getColumnModel().getColumn(6).setMaxWidth(0);
+        }
 
         lblAvl.setForeground(new java.awt.Color(159, 18, 18));
         lblAvl.setText(" ");
@@ -445,7 +452,7 @@ public class Invoice extends javax.swing.JInternalFrame {
                                                 .addComponent(txtItemID))
                                             .addComponent(txtItemName, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(scMain, javax.swing.GroupLayout.DEFAULT_SIZE, 764, Short.MAX_VALUE)))
+                                .addComponent(scMain, javax.swing.GroupLayout.DEFAULT_SIZE, 775, Short.MAX_VALUE)))
                         .addContainerGap())))
         );
         jPanel2Layout.setVerticalGroup(
@@ -482,7 +489,7 @@ public class Invoice extends javax.swing.JInternalFrame {
                         .addGap(0, 119, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(scMain, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                         .addComponent(scOption, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))))
         );
 
@@ -528,11 +535,13 @@ public class Invoice extends javax.swing.JInternalFrame {
             }
         });
         jScrollPane1.setViewportView(tblClient);
-        tblClient.getColumnModel().getColumn(0).setPreferredWidth(40);
-        tblClient.getColumnModel().getColumn(1).setResizable(false);
-        tblClient.getColumnModel().getColumn(1).setPreferredWidth(0);
-        tblClient.getColumnModel().getColumn(2).setPreferredWidth(90);
-        tblClient.getColumnModel().getColumn(3).setPreferredWidth(200);
+        if (tblClient.getColumnModel().getColumnCount() > 0) {
+            tblClient.getColumnModel().getColumn(0).setPreferredWidth(40);
+            tblClient.getColumnModel().getColumn(1).setResizable(false);
+            tblClient.getColumnModel().getColumn(1).setPreferredWidth(0);
+            tblClient.getColumnModel().getColumn(2).setPreferredWidth(90);
+            tblClient.getColumnModel().getColumn(3).setPreferredWidth(200);
+        }
 
         txtCID.setEditable(false);
         txtCID.setNextFocusableComponent(txtClientName);
@@ -763,14 +772,13 @@ public class Invoice extends javax.swing.JInternalFrame {
                                 .addGap(132, 132, 132)))
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(txtHandling, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE)
-                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(txtNetPayable)
-                                .addComponent(txtPaidAmount, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txtTax, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txtBalance, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txtTaxable, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(cmbTaxType, javax.swing.GroupLayout.Alignment.TRAILING, 0, 109, Short.MAX_VALUE)
-                                .addComponent(txtTotalAfterTax, javax.swing.GroupLayout.Alignment.TRAILING)))
+                            .addComponent(txtNetPayable, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtPaidAmount)
+                            .addComponent(txtTax)
+                            .addComponent(txtBalance)
+                            .addComponent(txtTaxable)
+                            .addComponent(cmbTaxType, 0, 109, Short.MAX_VALUE)
+                            .addComponent(txtTotalAfterTax))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
@@ -994,7 +1002,7 @@ public class Invoice extends javax.swing.JInternalFrame {
                         .addGap(23, 23, 23))
                     .addGroup(pnlPrintLayout.createSequentialGroup()
                         .addComponent(btnPrint2)
-                        .addContainerGap())
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(pnlPrintLayout.createSequentialGroup()
                         .addGroup(pnlPrintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnPrint3)
@@ -1005,7 +1013,7 @@ public class Invoice extends javax.swing.JInternalFrame {
             pnlPrintLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlPrintLayout.createSequentialGroup()
                 .addComponent(btnPrint4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnPrint1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnPrint2)
@@ -1013,6 +1021,9 @@ public class Invoice extends javax.swing.JInternalFrame {
                 .addComponent(btnPrint3)
                 .addContainerGap())
         );
+
+        jLabel37.setForeground(new java.awt.Color(255, 153, 0));
+        jLabel37.setText("F3 to popup list");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1042,21 +1053,26 @@ public class Invoice extends javax.swing.JInternalFrame {
                                         .addGap(101, 101, 101)))
                                 .addComponent(scOption1, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel2)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel4)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtInvoiceNo, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel26))
+                                    .addComponent(jLabel2))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtInvoiceNo, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel26)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtRefNo, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtInvoiceDate, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(137, 137, 137)
+                                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 737, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(txtRefNo, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel6)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(txtInvoiceDate, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -1066,7 +1082,9 @@ public class Invoice extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1078,6 +1096,8 @@ public class Invoice extends javax.swing.JInternalFrame {
                         .addComponent(jLabel4)
                         .addComponent(jLabel6)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jtpMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2069,6 +2089,7 @@ public class Invoice extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel34;
     private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
